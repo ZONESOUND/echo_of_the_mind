@@ -1,0 +1,185 @@
+html, body {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 100%;
+    line-height: 1.5;
+    font-family: 'Noto Sans TC', 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    
+}
+
+#wrapper {
+    position:absolute;
+    top:10px; 
+    left:0;
+    min-height: calc(100% - 5px);
+}
+
+#background {
+    position:absolute; 
+    top:0; 
+    left:0;
+    width: 100%;
+    min-height: 100%;
+    /* background-size: 100%;  */
+    /* height: 100%; */
+    display: block;
+}
+
+#title, #footer {
+    width: 100%;
+}
+
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.step-2 {
+    padding: 0 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: calc(100% - 30px);
+}
+
+.step-2 p{
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+#turn {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#turnwarning {
+    z-index: 102;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 1.2em;
+}
+  
+@media (orientation: landscape) {
+    #turn {
+        display:block;
+    }
+}
+  
+button {
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 8px;
+    background: transparent;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #666666;
+  color: #666666;
+}
+
+button:focus {
+    background: white;
+}
+
+#start {
+    margin-top: 20%;
+    animation: fadeIn 3s;
+    -moz-animation: fadeIn 1s;
+    /* animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: alternate; */
+}
+
+#answer {
+    margin-top: 10%;
+    animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+}
+
+#replay {
+    border: none;
+    margin-top: 10%;
+    display: none;
+    animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+}
+
+#replay:focus {
+    background: transparent;
+    color: gray;
+}
+
+.fullwrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+
+/* put at the end */
+#loadOverlay {
+    display:none;
+    animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+}
