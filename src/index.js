@@ -27,6 +27,7 @@ $(()=>{
     $("#start").on('click', ()=> {
         viewstep.showNext();
         $('#answer').attr('disabled', true);
+        speakout('');
     });
 
     $("#answer").on("click", () => {
