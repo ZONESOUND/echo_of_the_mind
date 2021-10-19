@@ -21,7 +21,7 @@ html, body {
 }
 
 #background {
-    position:absolute; 
+    position:fixed; 
     top:0; 
     left:0;
     width: 100%;
@@ -121,12 +121,28 @@ button:focus {
     display: none;
     animation: fadeIn 1s;
     -moz-animation: fadeIn 1s;
+    margin-right: 5%;
 }
 
 #replay:focus {
     background: transparent;
     color: gray;
 }
+
+#intro {
+    border: none;
+    margin-top: 10%;
+    display: none;
+    animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    margin-left: 5%;
+}
+
+#intro:focus {
+    background: transparent;
+    color: gray;
+}
+
 
 .fullwrapper {
     position: absolute;
@@ -138,6 +154,26 @@ button:focus {
     box-sizing: border-box;
 }
 
+#intropage {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.progressimg {
+    display: block;
+    width: calc(100% + 70px);
+    height: auto;
+    margin-right: -35px;
+    margin-left: -35px;
+}
+
+#previmg {
+    width: 15%;
+}
 
 @keyframes fadeIn {
     from {

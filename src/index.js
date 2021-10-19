@@ -35,14 +35,22 @@ $(()=>{
         $('#answer').attr('disabled', true);
         $("#answer").css('visibility', 'hidden');
         speak();
-        changeVisibility("#replay", "#answer");
+        changeVisibilitys(["#replay", "#intro"], ["#answer"]);
+        //$("#intro").css('display', 'inline');
+        //$(selhide).css('display', 'none');
     });
 
     $("#replay").on("click", ()=>{
-        initquestion();
-        $("#input").val("");
-        setTimeout(() => {changeVisibility("#answer", "#replay")}, 500);
-        $("#input").prop('disabled', false);
+        replay();
+    });
+
+    $("#intro").on("click", ()=>{
+        viewstep.showNext();
+    });
+
+    $("#previmg").on("click", ()=>{
+        replay();
+        viewstep.showPrev();
     });
 
     $('#input').on('keyup', function(){
@@ -53,6 +61,16 @@ $(()=>{
     })
 });
 
+function replay() {
+    initquestion();
+    $("#input").val("");
+    setTimeout(() => {
+        changeVisibilitys(["#answer"], ["#replay","#intro"]);
+        //changeVisibility("#answer", "#replay");
+        //$("#intro").css('display', 'none');
+    }, 0);
+    $("#input").prop('disabled', false);
+}
 
 function initquestion() {
     let randomId = questionId;
@@ -162,4 +180,19 @@ function changeVisibility(selshow, selhide) {
     $(selshow).css('display', 'inline');
     $(selhide).css('display', 'none');
     $(selshow).css('visibility', 'visible');
+}
+
+function changeVisibilitys(selshow, selhide) {
+    for (let i=0; i<selshow.length; i++) {
+        $(selshow[i]).css('visibility', 'hidden');
+        $(selshow[i]).css('display', 'inline');
+    }
+    for (let i=0; i<selhide.length; i++) {
+        $(selhide[i]).css('display', 'none');
+    }
+    for (let i=0; i<selshow.length; i++) {
+        $(selshow[i]).css('display', 'none');
+        $(selshow[i]).css('visibility', 'visible');
+        $(selshow[i]).css('display', 'inline');
+    }
 }

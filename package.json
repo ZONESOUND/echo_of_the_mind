@@ -20,17 +20,17 @@
     "@babel/plugin-proposal-private-methods": "^7.8.3",
     "@babel/preset-env": "^7.9.5",
     "babel-loader": "^8.1.0",
-    "html-webpack-plugin": "^4.2.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.2.0",
     "script-loader": "^0.7.2",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@zonesoundcreative/view-step": "^1.0.0",
+    "@zonesoundcreative/view-step": "^1.0.2",
     "firebase": "^9.1.2",
     "jquery": "^3.5.0"
   },
