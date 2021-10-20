@@ -160,6 +160,7 @@ button:focus {
 }
 
 .logo {
+    margin: 10px;
     height: 50px;
 }
 

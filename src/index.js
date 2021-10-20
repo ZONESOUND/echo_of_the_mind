@@ -85,7 +85,6 @@ function initquestion() {
 
 function speak() {
     var input = $("#input").val();
-    console.log(input)
 
     var newChildRef = collectionRef.push(input);
     newChildRef.set({ 'text': input, 'date': new Date().toString() , 'question': questionId});
@@ -97,8 +96,8 @@ function speakout(input) {
     var msg = new SpeechSynthesisUtterance(input);
     msg.lang = "zh-TW";
     msg.text = input;
-    msg.rate = 1;
-    msg.pitch = 1;    
+    msg.rate = 0.6;
+    msg.pitch = 0.3;    
     msg.voice = twvoice;
     //window.speechSynthesis.speak(msg);
     synth.speak(msg);
