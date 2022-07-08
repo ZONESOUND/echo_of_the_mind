@@ -83,7 +83,7 @@ html, body {
   
 button {
     color: black;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 3px;
     padding: 8px;
     background: transparent;
